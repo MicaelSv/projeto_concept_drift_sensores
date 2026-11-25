@@ -24,7 +24,7 @@ Recomenda-se Python 3.11 ou mais recente.
 1. Clone o repositório e entre na pasta:
 
    ```bash
-   git clone URL_DO_REPOSITORIO
+   git clone https://github.com/MicaelSv/projeto_concept_drift_sensores.git
    cd projeto_concept_drift_sensores
    ```
 
