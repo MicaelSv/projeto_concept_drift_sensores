@@ -1,0 +1,37 @@
+{
+  "status": "validacao_de_robustez_multiclassificador",
+  "modalidade": "A - aplicacao pratica",
+  "objetivo": "Verificar se as conclusoes sobre as politicas de atualizacao temporal se mantem em classificadores com vieses indutivos distintos.",
+  "avaliacao": {
+    "ordem_temporal": "B1 ate B10",
+    "lotes_teste": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "regra": "para testar Bt, usar exclusivamente lotes anteriores a t",
+    "metrica_primaria": "macro-F1 com as seis classes fixas",
+    "agregacao": "media por semente em cada lote, seguida de media nao ponderada entre os nove lotes"
+  },
+  "estrategias": [
+    "Estatico B1",
+    "Ultimo lote",
+    "Janela de 3 lotes",
+    "Cumulativo",
+    "Ensemble por lote com decaimento de recencia"
+  ],
+  "classificadores": {
+    "SVM_RBF": {
+      "normalizacao": "StandardScaler(with_mean=False)",
+      "C": 1.0,
+      "gamma": "scale",
+      "repeticoes": 1,
+      "observacao": "estimador deterministico"
+    },
+    "RandomForest": {
+      "n_estimators": 100,
+      "max_features": "sqrt",
+      "bootstrap": true,
+      "class_weight": null,
+      "seeds": [11, 22, 33, 44, 55]
+    }
+  },
+  "ensemble_decaimento": 0.7,
+  "observacao": "Hiperparametros fixos, sem ajuste nos lotes de teste. A Floresta Aleatoria e usada como analise de robustez das conclusoes, nao para selecionar o melhor resultado."
+}

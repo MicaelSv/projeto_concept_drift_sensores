@@ -1,0 +1,34 @@
+# Nunca adicionar os dados originais ao Git
+data/raw/*
+!data/raw/.gitkeep
+# Dados derivados e modelos: guardar em backup/artefatos versionados
+data/consolidated/*
+!data/consolidated/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+models/*
+!models/.gitkeep
+results/*
+!results/.gitkeep
+reports/figures/*
+!reports/figures/.gitkeep
+reports/tables/*
+!reports/tables/.gitkeep
+reports/logs/*
+!reports/logs/.gitkeep
+
+# Notebooks e pacotes gerados localmente
+*.ipynb
+*.zip
+checksums/codigo_notebooks.sha256
+checksums/experimento_final.sha256
+checksums/resultados.sha256
+
+# Ambientes e arquivos temporários
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.pytest_cache/
+.env
+Thumbs.db

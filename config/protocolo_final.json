@@ -1,0 +1,32 @@
+{
+  "status": "experimento_final_reprodutivel",
+  "modalidade": "A - aplicacao pratica",
+  "pergunta_pesquisa": "Como diferentes estrategias de atualizacao temporal afetam o desempenho de classificacao sob deriva de sensores?",
+  "hipotese": "Estrategias que reutilizam dados historicos superam o modelo estatico e sao mais estaveis que o retreinamento apenas no lote mais recente.",
+  "avaliacao": {
+    "ordem_temporal": "B1 ate B10",
+    "lotes_teste": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "regra": "para testar Bt, usar exclusivamente lotes anteriores a t",
+    "metrica_primaria": "macro-F1 com as seis classes fixas",
+    "metricas_secundarias": ["acuracia", "acuracia balanceada das classes presentes"],
+    "agregacao_primaria": "media nao ponderada entre os nove lotes de teste"
+  },
+  "estrategias": [
+    "Estatico B1",
+    "Ultimo lote",
+    "Janela de 3 lotes",
+    "Cumulativo",
+    "Ensemble por lote com decaimento de recencia"
+  ],
+  "estimador": {
+    "normalizacao": "StandardScaler(with_mean=False)",
+    "modelo": "SVC",
+    "kernel": "rbf",
+    "C": 1.0,
+    "gamma": "scale",
+    "class_weight": null,
+    "ensemble_decaimento": 0.7
+  },
+  "repeticoes": "nao aplicavel: SVC e protocolo sao deterministicos",
+  "observacao": "Hiperparametros fixos e iguais entre estrategias para isolar o efeito da politica de atualizacao e evitar ajuste nos lotes de teste."
+}

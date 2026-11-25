@@ -1,0 +1,32 @@
+PROJETO FINAL DA DISCIPLINA
+Aprendizagem de Máquina para Ambientes Não Estacionários
+Orientações para desenvolvimento do artigo científico
+1. Objetivo do projeto
+O projeto final deverá consolidar os conteúdos da disciplina por meio do desenvolvimento de um trabalho com estrutura de artigo científico. O objetivo é investigar um problema relacionado a aprendizado de máquina em ambientes dinâmicos ou não estacionários, formulando uma pergunta de pesquisa clara e produzindo evidências experimentais que permitam respondê-la.
+O TRABALHO NÃO DEVE SE LIMITAR À IMPLEMENTAÇÃO DE UMA BIBLIOTECA OU À REPRODUÇÃO DE UM EXEMPLO. Espera-se que o grupo JUSTIFIQUE O PROBLEMA, DEFINA UM PROTOCOLO EXPERIMENTAL, COMPARE ALTERNATIVAS, ANALISE CRITICAMENTE OS RESULTADOS e apresente conclusões coerentes com as evidências obtidas.
+2. Modalidades de projeto
+Modalidade A — Aplicação prática das técnicas estudadas
+Selecionar um problema real em que os dados, o comportamento do sistema ou a relação entre entradas e saídas possam mudar ao longo do tempo. O grupo deverá aplicar e avaliar técnicas estudadas na disciplina, demonstrando por que uma abordagem adaptativa ou contínua é relevante para o contexto.
+Exemplos de contextos: saúde, educação, finanças, sensores/IoT, indústria, recomendação, segurança, mobilidade ou outros domínios com dinâmica temporal.
+A contribuição pode estar no desenho experimental, na comparação de estratégias, na análise temporal do comportamento do modelo ou na demonstração de uma solução em um contexto relevante.
+Modalidade B — Proposição e avaliação de uma técnica
+Propor uma estratégia nova, adaptação, combinação ou extensão de uma técnica existente para lidar com algum aspecto de ambientes não estacionários ou aprendizado contínuo. A proposta deverá ser MOTIVADA POR UMA LIMITAÇÃO IDENTIFICADA e comparada experimentalmente com baselines adequados.
+Não é necessário que a proposta seja complexa. Uma modificação simples pode constituir um bom projeto quando existe hipótese clara, justificativa, protocolo experimental adequado e análise consistente.
+3. Definição da Pergunta de pesquisa e hipótese
+O projeto deve ser guiado por pelo menos uma pergunta de pesquisa (RQ). Ela deve ser específica o suficiente para ser respondida pelos experimentos.
+Exemplos de formulação:
+Como diferentes estratégias de adaptação afetam o desempenho após mudanças no ambiente?
+Uma estratégia adaptativa supera um modelo estático quando o comportamento dos dados muda?
+A técnica proposta reduz o tempo de recuperação após uma mudança sem degradar excessivamente o desempenho em períodos estáveis?
+Como uma estratégia de aprendizado contínuo equilibra aquisição de novo conhecimento e retenção do conhecimento anterior?
+Formule também uma hipótese: qual comportamento é esperado e por quê? A hipótese deverá orientar a escolha das comparações e das métricas.
+4. Estrutura esperada do artigo
+1. Título e resumo — Apresentar de forma objetiva o problema, objetivo, abordagem, protocolo experimental, principal resultado e conclusão.
+2. Introdução — Contextualizar o problema; explicar sua relevância; apresentar a lacuna ou dificuldade; formular objetivo, RQ(s), hipótese(s) e contribuições do trabalho.
+3. Fundamentação e trabalhos relacionados — Apresentar apenas os conceitos necessários para compreender o trabalho e discutir pesquisas diretamente relacionadas. A revisão deve ajudar a justificar a lacuna e as escolhas experimentais.
+4. Metodologia / proposta — Descrever dados, cenário temporal, pré-processamento, modelos, estratégias de adaptação/aprendizado contínuo, baselines e, na Modalidade B, a técnica proposta com detalhes suficientes para reprodução.
+5. Protocolo experimental — Definir divisão temporal dos dados, sequência de experiências ou fluxo, repetições/seeds quando aplicável, hiperparâmetros relevantes, baselines, métricas e procedimento de avaliação.
+6. Resultados — Apresentar tabelas e gráficos que respondam diretamente às RQs. Sempre que o problema for temporal, evitar depender exclusivamente de uma métrica final agregada.
+7. Discussão — Interpretar os resultados: por que determinada estratégia funcionou ou falhou? Em quais condições? Quais trade-offs apareceram? Relacionar os achados às RQs e à literatura.
+8. Limitações e ameaças à validade — Explicitar limitações de dados, cenários, métodos, métricas, generalização e desenho experimental.
+9. Conclusão — Responder às RQs com base nos resultados, resumir contribuições e indicar extensões futuras.

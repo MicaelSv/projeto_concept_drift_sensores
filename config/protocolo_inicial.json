@@ -1,0 +1,8 @@
+{
+  "status": "exploratorio_nao_final",
+  "fonte": "Vergara et al. 2012, Chemical gas sensor drift compensation using classifier ensembles",
+  "dados": {"lotes": 10, "atributos": 128, "classes": [1, 2, 3, 4, 5, 6], "registros_esperados": 13910},
+  "avaliacao_temporal": {"primeiro_teste": 2, "ultimo_teste": 10, "estatico_treino": [1], "periodico_treino": "lote_teste - 1"},
+  "modelo_exploratorio": {"tipo": "SVC", "kernel": "rbf", "C": 1.0, "gamma": "scale", "standard_scaler_with_mean": false},
+  "observacoes": ["Ajustar hiperparametros apenas usando dados historicos em protocolo final", "Nao houve experimento de ensemble ainda"]
+}
